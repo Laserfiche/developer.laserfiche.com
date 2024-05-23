@@ -73,13 +73,21 @@ parent: Laserfiche Title
 ---
 ```
 
-## Using html-proofer to test the relative links
+## Testing
+
+### Using html-proofer to test the relative links
 
 To check if there are any dead relative links in the project, navigate to src, and run
 
 ```sh
-jekyll build
 bundle exec rake
+```
+
+### Checking that all legacy links work
+
+To check that redirects are setup from old URLs to new pages, run the following commands
+```sh
+python src/tests/redirects.py
 ```
 
 ## Previewing pages from build artifact

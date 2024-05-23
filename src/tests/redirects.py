@@ -24,7 +24,7 @@ def fmtBrokenLinks(broken_links):
     map_list = [ url + " -> " + str(broken[url]) for url in broken_links.keys()]
     return "\n".join(map_list)
 
-fname = "./redirected-links.txt"
+fname = "./src/tests/redirected-links.txt"
 links = getLinks(fname)
 broken = findBrokenLinks(links)
 
