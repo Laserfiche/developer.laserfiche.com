@@ -1,13 +1,13 @@
 # © 2024 Laserfiche.
 # See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.
 import requests
-
+SCHEME_AND_DOMAIN = "https://developer.laserfiche.com"
 
 def getLinks(path):
     links = []
     with open(path, "r") as f:
         lines = f.readlines()
-        links = [url[:-1] for url in lines]
+        links = [SCHEME_AND_DOMAIN + url[:-1] for url in lines]
     return links
 
 def findBrokenLinks(links):
@@ -24,7 +24,7 @@ def fmtBrokenLinks(broken_links):
     map_list = [ url + " -> " + str(broken[url]) for url in broken_links.keys()]
     return "\n".join(map_list)
 
-fname = "./src/tests/redirected-links.txt"
+fname = "./redirected-links.txt"
 links = getLinks(fname)
 broken = findBrokenLinks(links)
 
