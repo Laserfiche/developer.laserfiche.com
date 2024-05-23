@@ -7,6 +7,7 @@ redirect_from:
   - guide_overview-of-the-laserfiche-api.html
   - api/index.html
   - api.html
+  - API.html
 has_children: true
 ---
 

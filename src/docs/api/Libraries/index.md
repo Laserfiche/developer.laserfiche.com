@@ -4,6 +4,7 @@ title: Libraries
 nav_order: 2
 redirect_from:
   - libraries.html
+  - libraries/index.html
 parent: API
 ---
 
