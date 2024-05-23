@@ -29,7 +29,7 @@ The flow of calls is summarized below:
 
 Let's look at a specific example with the copy entry API call.
 
-First we’ll call the copy API to copy a folder and its content to another folder in the repository:
+First we'll call the copy API to copy a folder and its content to another folder in the repository:
 
 ```
 POST https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{destinationEntryId}/Laserfiche.Repository.Folder/children/CopyAsync

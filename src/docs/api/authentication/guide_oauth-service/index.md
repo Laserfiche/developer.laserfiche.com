@@ -83,7 +83,7 @@ If a public **access key** was created, an HMAC client credential will need to b
 | aud           | The audience claim should be set to "laserfiche.com"                                                                                           |
 | exp           | The expiration time claim for the JWT, formatted as seconds since Unix epoch. Recommended value is between 1 to 60 mins from the current time. |
 
-The JWT will also need to be signed by the **access key**. See the links below for how to create a signed JWT using the [Laserfiche Client Core API client libraries](../../Libraries/).
+The JWT will also need to be signed by the **access key**. See the links below for how to create a signed JWT using the [Laserfiche Client Core API client libraries](../../libraries/).
 
 - [JavaScript/TypeScript](https://github.com/Laserfiche/lf-api-client-core-js/blob/2ebf041d89d7a656a409052f3b2efe191a5c8cc0/lib/OAuth/AccessKey.ts#L60)
 - [.NET](https://github.com/Laserfiche/lf-api-client-core-dotnet/blob/b6a696a93169a1f7cca16774db0fb888bb2163b0/src/Utils/JwtUtils.cs#L22)

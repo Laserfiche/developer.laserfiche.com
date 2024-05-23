@@ -8,7 +8,7 @@ task :htmlproof do
   sh "bundle exec jekyll build"
   HTMLProofer.check_directory('_site/', opts = {
     # :ignore_urls => [/https?:(?!(.*developer\.laserfiche\.com.*))/], # ignore all external URLs EXCEPT for developer.laserfiche.com
-    :ignore_urls => [/https?/]
+    :ignore_urls => [/https?/] # ignore all external urls
   }).run
 end
 

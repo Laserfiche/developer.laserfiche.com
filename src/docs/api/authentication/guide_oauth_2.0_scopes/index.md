@@ -100,7 +100,7 @@ Examples of Table API granular scopes
 | ------------------------------ | -------------------------------------------------------- | ----------------------------- |
 | odata4/table/MyTable('1').Read | GET https://api.laserfiche.com/odata4/table/MyTable('1') | Get row with key 1 in MyTable |
 
-The OAuth scope required to access each API is documented on the [Swagger Playground](https://developer.laserfiche.com/api/playground.html).
+The OAuth scope required to access each API is documented on the [Swagger Playground](../../playground/).
 
 ## Next Steps
 

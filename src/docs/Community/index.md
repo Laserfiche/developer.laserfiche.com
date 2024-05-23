@@ -16,9 +16,9 @@ Stay up to date on Laserfiche Cloud and connected to the broader Laserfiche comm
 Visit the [Laserfiche Answers](https://answers.laserfiche.com/) forum to connect with our staff and other developers in the community.
 
 - Stuck on a coding question? Get helpful feedback on your code from the community.
-- Have feature requests and feedback? We love hearing about what you’re building and how we can improve the API!
+- Have feature requests and feedback? We love hearing about what you're building and how we can improve the API!
 
-Tip: Be sure to tag your post under the [Laserfiche API](https://answers.laserfiche.com/questions/topic/67/Laserfiche-API) topic to get others’ attention!
+Tip: Be sure to tag your post under the [Laserfiche API](https://answers.laserfiche.com/questions/topic/67/Laserfiche-API) topic to get others' attention!
 
 For the latest Laserfiche Cloud updates, visit the [Cloud Changelog](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#changelog.htm).
 

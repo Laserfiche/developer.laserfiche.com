@@ -24,7 +24,7 @@ Learn how to create a secure connection to Laserfiche Cloud and authenticate eac
 
 ## Authenticating to the Swagger Playground
 
-Follow our step-by-step guide to authenticate and interact with our Swagger Playground. [Learn More](./docs/api/authentication/guide_authenticating-to-the-swagger-playground/)
+Experiment with the Laserfiche API through a visual UI. Follow our step-by-step guide to authenticate and interact with our Swagger Playground. [Learn More](./docs/api/authentication/guide_authenticating-to-the-swagger-playground/)
 
 ## Building Laserfiche Apps
 

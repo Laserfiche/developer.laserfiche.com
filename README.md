@@ -1,7 +1,7 @@
 # developer.laserfiche.com
 
 Laserfiche developer portal: https://developer.laserfiche.com
-
+First published 5/23/2024
 ## Building documentation locally
 
 ### Prerequisites: <tag id="local_prereq">

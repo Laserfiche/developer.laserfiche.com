@@ -74,7 +74,7 @@ One alternative to using the GET request above, is to send a POST request that i
 GET https://api.laserfiche.com/repository/v1/Repositories/*repoId*/AuditReasons
 ```
 
-For this scenario, we'll export the document using the audit reason with ID 71, name "Public request". Once you’ve parsed the response of the AuditReasons request, you can send the audit reason ID and optionally add a comment as part of this request.
+For this scenario, we'll export the document using the audit reason with ID 71, name "Public request". Once you've parsed the response of the AuditReasons request, you can send the audit reason ID and optionally add a comment as part of this request.
 
 {: .note }
 Note: The only difference between this route and the one mentioned in the previous example is the addition of the request body. All notes in the previous example also apply to the one mentioned in this section.

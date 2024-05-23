@@ -25,7 +25,7 @@ application.
 
 1. In the [Developer Console](../../../getting-started/developer-console/), click the application that you want to add manifest information
    to.
-1. On the App Configuration page, in the "Developer Info" section, fill in details about your app. and save your changes. ![](./assets/images/manifest-02.png)
+1. On the App Configuration page, in the "Developer Info" section, fill in details about your app and save your changes. ![](./assets/images/manifest-02.png)
 
 ## Create an Application from a Manifest
 

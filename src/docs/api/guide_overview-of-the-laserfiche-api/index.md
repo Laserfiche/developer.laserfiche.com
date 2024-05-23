@@ -16,7 +16,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Overview of the Laserfiche API
 
-The Laserfiche API is a set of RESTful web APIs that allows you interact with Laserfiche Cloud services. This guide will provide an overview of how we’ve adapted Laserfiche services, resources, and concepts into the REST standard.
+The Laserfiche API is a set of RESTful web APIs that allows you interact with Laserfiche Cloud services. This guide will provide an overview of how we've adapted Laserfiche services, resources, and concepts into the REST standard.
 
 ## Cloud vs Self-Hosted
 
