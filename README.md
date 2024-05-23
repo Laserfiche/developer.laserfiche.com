@@ -83,7 +83,7 @@ To check if there are any dead relative links in the project, navigate to src, a
 bundle exec rake
 ```
 
-### Checking that all legacy links work
+### Checking that all legacy links are mapped to new pages
 
 To check that redirects are setup from old URLs to new pages, run the following commands
 ```sh
