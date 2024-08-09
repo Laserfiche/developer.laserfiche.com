@@ -26,7 +26,7 @@ HTTP Requests to the Laserfiche API will require an Access Token for authenticat
 {: .note }
 **Note:** The following section only applies to Laserfiche Cloud.
 
-The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/authentication/guide_authenticate-to-the-laserfiche-api/). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
+The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/authentication/). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
 
 1. Follow [this guide](../../api/authentication/guide_oauth-service) to register an OAuth service app in the Developer Console with a long-lasting Authorization Key.
 
@@ -77,62 +77,65 @@ See the [this guide](../../guides/documents-and-folders/guide_importing-document
     - The request **URI** is `https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{parentFolderId}/Folder/Import`. The hostname may need to be updated to `api.laserfiche.ca`, `api.eu.laserfiche.com`, etc., depending on the data center your Laserfiche Cloud repository resides in, where:
       - `{repositoryId}` is your Laserfiche repository ID.
       - `{parentFolderId}` is the Laserfiche entry ID of the folder the document will be imported to.
-      - `{documentName}` is the name of the document when imported to the Laserfiche repository.
     - The Access Token from the **Get Laserfiche Access Token** [action](#authentication) must be added to the Authorization header.
       Format the Authorization header value as follows `Bearer @{body('Get_Laserfiche_Access_Token')['access_token']}`.
-    - The request **body** is a multipart/form-data with two parts.
+    - The request **body** is a multipart/form-data with two parts:
+      1. File content from the **Get file content using path** action.
 
-      - The first part contains the file content from the **Get file content using path** action.
+         {: .note }
+        **Note:** The `Content-Type` header, or the extension in the filename in the `Content-Disposition` header, is used to determine the file type for the document imported to Laserfiche.
 
-        {: .note }
-        **Note:** The `Content-Type` header or the extension in the filename in the `Content-Disposition` header is used to determine the file type for the document imported to Laserfiche.
+         {: .note }
+        **Note:** To import a PDF as an electronic document, the `Content-Transfer-Encoding` header must be specified and have a value of `binary`.
 
-        - As an example, the second part assigns the `Email` template and the `Sender` and `Recipients` fields to the imported file. The metadata may need to be updated if the template and field definitions do not exist in the Laserfiche repository. - `{documentName}` is the name of the document when imported to the Laserfiche repository. - `autoRename` indicates if the imported entry should be automatically renamed if an entry already exists with the given name in the folder. The default value is false.
-
-1. Copy and paste the following request body.
-
-  ```json
-  {
-    "$content-type": "multipart/form-data",
-    "$multipart": [
-      {
-        "headers": {
-          "Content-Disposition": "form-data; name=\"electronicDocument\"; filename=@{outputs('Get_file_metadata')?['body/Name']}",
-          "Content-Transfer-Encoding": "binary"
-        },
-        "body": @{body('Get_file_content_using_path')}
-      },
-      {
-        "headers": {
-          "Content-Disposition": "form-data; name=\"request\"",
-          "Content-Transfer-Encoding": "binary"
-        },
-        "body": {
-          "name": "{documentName}",
-          "autoRename": true,
-          "metadata": {
-            "templateName": "Email",
-            "fields": [
+          JSON content specifying details about the document to be created (e.g., name, metadata, etc.) 
+        - In the following example, the document would be:
+          1. Named `{documentName}`
+          1. Automatically renamed if an entry already exists with the given name in the folder (by default, the `autoRename` property is false).
+          1. Assigned the `Email` template
+          1. Have its `Sender` and `Recipients` fields populated
+          ```json
+          {
+            "$content-type": "multipart/form-data",
+            "$multipart": [
               {
-                "name": "Sender",
-                "values": [
-                  "sender@laserfiche.com"
-                ]
+                "headers": {
+                  "Content-Disposition": "form-data; name=\"electronicDocument\"; filename=@{outputs('Get_file_metadata')?['body/Name']}",
+                  "Content-Transfer-Encoding": "binary"
+                },
+                "body": @{body('Get_file_content_using_path')}
               },
               {
-                "name": "Recipients",
-                "values": [
-                  "recipient@laserfiche.com"
-                ]
+                "headers": {
+                  "Content-Disposition": "form-data; name=\"request\"",
+                  "Content-Transfer-Encoding": "binary"
+                },
+                "body": {
+                  "name": "{documentName}",
+                  "autoRename": true,
+                  "metadata": {
+                    "templateName": "Email",
+                    "fields": [
+                      {
+                        "name": "Sender",
+                        "values": [
+                          "sender@laserfiche.com"
+                        ]
+                      },
+                      {
+                        "name": "Recipients",
+                        "values": [
+                          "recipient@laserfiche.com"
+                        ]
+                      }
+                    ]
+                  }
+                }
               }
             ]
           }
-        }
-      }
-    ]
-  }
-  ```
-
+          ```
+          
 A successful call will return a 201 HTTP response status code with the details of the created entry in the response body. In addition, the URI for the created entry is returned in the _location_ HTTP response header. In the following example response, _{documentName}_ has been set to _"LFAPI created document"_.
 
 ```
