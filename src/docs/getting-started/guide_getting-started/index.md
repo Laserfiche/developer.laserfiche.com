@@ -23,7 +23,7 @@ Follow our step-by-step guide to authenticate and interact with our Swagger Play
 
 ## Authenticate to the Laserfiche API
 
-Learn how to create a secure connection to Laserfiche and authenticate each API request. [Learn More](../../api/authentication/guide_authenticate-to-the-laserfiche-api/)
+Learn how to create a secure connection to Laserfiche and authenticate each API request. [Learn More](../../api/authentication/)
 
 ## Where can I use the Laserfiche API?
 
