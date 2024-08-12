@@ -42,17 +42,19 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Run tests
-        run: bundle exec rake
-
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./src
           destination: ./_site
+
+      - name: Install dependencies
+        working-directory: ./src
+        run: bundle install
+
+      - name: Run tests
+        working-directory: ./src
+        run: bundle exec rake
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
