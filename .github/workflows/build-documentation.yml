@@ -48,10 +48,10 @@ jobs:
           source: ./src
           destination: ./_site
 
-      - name: Install dependencies
-        working-directory: ./src
-        run: bundle install
-
+      #- name: Install dependencies
+      #  working-directory: ./src
+      #  run: bundle install
+      
       - name: Run tests
         working-directory: ./src
         run: bundle exec rake
