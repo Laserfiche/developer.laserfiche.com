@@ -42,6 +42,12 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Run tests
+        run: bundle exec rake
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

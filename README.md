@@ -35,7 +35,7 @@ First published 5/23/2024
    - Troubleshoot:
      - If you see error `Gem::RemoteFetcher::FetchError bad response Forbidden 403`, stay under directory `/src` and follow [the steps](#fetch_error) in the dependency issues in the prerequisites to install the dependency from a local .gem file.
 1. Run `bundle exec jekyll serve --destination ../_site` to build and serve the documentation.
-1. Open `localhost:4000` in a browser.
+1. Open <http://localhost:4000> in a browser.
 
 ## Adding a new page, or modifying an existing one
 
@@ -78,6 +78,10 @@ To check if there are any dead relative links in the project, navigate to src, a
 jekyll build
 bundle exec rake
 ```
+
+NOTE: If `rake` fails with error `Could not open library 'libcurl.dll'`
+- Download CURL from https://curl.se/download.html
+- Copy and rename the correct version (e.g. libcurl-x64.dll for Windows 64 bit) into folder Ruby bin folder (e.g.`C:\Ruby33-x64\bin`)
 
 ## Previewing pages from build artifact
 
