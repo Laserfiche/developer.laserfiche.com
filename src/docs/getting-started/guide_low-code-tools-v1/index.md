@@ -26,7 +26,7 @@ HTTP Requests to the Laserfiche API will require an Access Token for authenticat
 {: .note }
 **Note:** The following section only applies to Laserfiche Cloud. For Self-Hosted, see the [Self-Hosted Laserfiche](#self-hosted-laserfiche) section.
 
-The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/authentication/guide_authenticate-to-the-laserfiche-api/). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
+The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/authentication/). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
 
 1. Follow this guide to [register an OAuth service app in the Developer Console with a long-lasting Authorization Key](../../api/authentication/guide_oauth-service/).
 1. Create an HTTP action in your low-code solution to obtain an Access Token given a long-lasting `{authorizationKey}` obtained during the application registration.

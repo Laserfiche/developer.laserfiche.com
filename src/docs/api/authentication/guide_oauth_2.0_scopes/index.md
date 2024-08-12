@@ -110,7 +110,7 @@ The OAuth scope required to access each API is documented on the [Swagger Playgr
 
 ## Next Steps
 
-- Learn how to [get a user access token](../guide_authenticate-to-the-laserfiche-api/).
+- Learn how to [get a user access token](../../authentication/).
 - Learn how to [create a connection for your OAuth Service App](../guide_oauth-service).
 - Learn how to [create a connection for your OAuth Single-Page App](../guide_oauth-spa/).
 - Learn how to [create a connection for your OAuth Web App](../guide_oauth-webapp/).
