@@ -18,7 +18,7 @@ The self-hosted Laserfiche API Server can be installed to connect with your self
 
 ### Differences between Cloud and Self-Hosted Laserfiche API
 
-- Authentication: The Cloud Laserfiche API follows the [OAuth 2.0 authorization model](../authentication/guide_authenticate-to-the-laserfiche-api/) whereas the Laserfiche API Server for self-hosted systems supports [username/password authentication](#authenticating-with-the-self-hosted-laserfiche-api).
+- Authentication: The Cloud Laserfiche API follows the [OAuth 2.0 authorization model](../authentication/) whereas the Laserfiche API Server for self-hosted systems supports [username/password authentication](#authenticating-with-the-self-hosted-laserfiche-api).
 - APIs: The deprecated Cloud ServerSession APIs are not available in the Laserfiche API Server for self-hosted systems.
 - Volume Support: The Laserfiche API Server supports choosing volumes when creating new entries while the Laserfiche API in Cloud does not.
 

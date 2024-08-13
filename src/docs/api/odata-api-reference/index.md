@@ -16,9 +16,9 @@ The Lookup Table OData API allows users to interact with data stored in lookup t
 
 ## Try it out
 
-Use [swagger](./../playground/index.md) to explore the API's possibilities.
+Use [swagger](./../playground/) to explore the API's possibilities.
 
-In order to authenticate, follow the instructions in [Authenticate to the Swagger playground](./../authentication/guide_authenticating-to-the-swagger-playground/) or [Autenticate to the Laserfiche API](./../authentication/guide_authenticate-to-the-laserfiche-api/). The table API supports both Bearer access token authentication and Basic username/password authentication for use with applications like Excel and Power BI. Those details can be found in the links above.
+In order to authenticate, follow the instructions in [Authenticate to the Swagger playground](./../authentication/guide_authenticating-to-the-swagger-playground/) or [Authenticate to the Laserfiche API](./../authentication/). The table API supports both Bearer access token authentication and Basic username/password authentication for use with applications like Excel and Power BI. Those details can be found in the links above.
 
 There are some security considerations to keep in mind when using the table API which are noted below.
 
@@ -28,7 +28,7 @@ The Table API is secured using project-based security. This will match the alrea
 
 ### How security works
 
-In order to authenticate, follow the steps for [Authenticating to the Laserfiche API](./../authentication/guide_authenticate-to-the-laserfiche-api/). The important part for the table API is the scopes. You must configure table and project scopes in the developer console and ensure you are requesting the correct scopes when requesting an access token.
+In order to authenticate, follow the steps for [Authenticating to the Laserfiche API](./../authentication/). The important part for the table API is the scopes. You must configure table and project scopes in the developer console and ensure you are requesting the correct scopes when requesting an access token.
 
 **Security is the intersection of:**
 

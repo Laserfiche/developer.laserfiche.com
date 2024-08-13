@@ -146,7 +146,7 @@ The Laserfiche API import can be made from the Postman tool.`
    - The `{repositoryId}` in the request URL is your **Laserfiche repository ID**.
    - The `{parentFolderId}` in the request URL is the **Laserfiche entry ID** of the folder the file will be imported to.
    - The `{documentName}` in the request URL is the **filename** when imported to the Laserfiche repository.
-   - The `{accessToken}` in the Authorization request header is a valid [access token](../../../api/authentication/guide_authenticate-to-the-laserfiche-api).
+   - The `{accessToken}` in the Authorization request header is a valid [access token](../../../api/authentication/).
    - The `electronicDocument` in the request body can be **selected** using the file picker.
    - As an example, the `request` in the request body assigns the `Email` template and the `Sender` and `Recipients` fields to the imported file. The metadata may need to be updated if the template and field definitions do not exist in the Laserfiche repository.
 1. **Send** the request to import a document. If an error occurs, verify that:

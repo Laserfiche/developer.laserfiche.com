@@ -51,6 +51,14 @@ jobs:
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
 
+      - name: Install dependencies
+        working-directory: ./src
+        run: bundle install
+
+      - name: Run tests
+        working-directory: ./src
+        run: bundle exec rake
+
   # Deployment job
   deploy:
     environment:
