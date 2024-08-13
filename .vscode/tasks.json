@@ -28,8 +28,7 @@
         "jekyll",
         "build",
         "--destination",
-        "../_site",
-        "--incremental",
+        "../_build",
         "--baseurl=${input:BaseURL}"
       ],
       "options": {
