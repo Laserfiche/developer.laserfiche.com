@@ -1,0 +1,50 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "serve",
+      "type": "shell",
+      "args": [
+        "exec",
+        "jekyll",
+        "serve",
+        "--destination",
+        "../_site",
+        "--incremental"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/src/"
+      },
+      "problemMatcher": [],
+      "command": "bundle"
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "args": [
+        "exec",
+        "jekyll",
+        "serve",
+        "--destination",
+        "../_site",
+        "--incremental",
+        "--baseurl=${input:BaseURL}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/src/"
+      },
+      "problemMatcher": [],
+      "command": "bundle"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "BaseURL",
+      "description": "Default /developer",
+      "default": "/developer",
+      "type": "promptString"
+    }
+  ]
+}
