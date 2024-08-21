@@ -3,7 +3,6 @@ layout: default
 title: OData Table API
 nav_order: 1
 parent: Laserfiche APIs
-has_children: true
 ---
 
 <!--© 2024 Laserfiche.
