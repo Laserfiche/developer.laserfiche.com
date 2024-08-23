@@ -39,6 +39,10 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      - name: Install dependencies
+        working-directory: ./src
+        run: bundle install
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -52,10 +56,6 @@ jobs:
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
-
-      - name: Install dependencies
-        working-directory: ./src
-        run: bundle install
 
       - name: Run tests
         working-directory: ./src
