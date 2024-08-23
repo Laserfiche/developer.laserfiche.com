@@ -23,9 +23,8 @@ LookupTables command line utility is an executable available for Windows and Lin
 ## Lookup Tables CLI Download And Installation
 
 - Download LookupTables CLI for your operating system:
-
-   - [lookuptables-win-x64.zip](./lookuptables-win-x64.zip)
-   - [lookuptables-linux-x64.zip](./lookuptables-linux-x64.zip)
+  - [lookuptables-win-x64.zip](./assets//lookuptables-win-x64.zip)
+  - [lookuptables-linux-x64.zip](./assets//lookuptables-linux-x64.zip)
 
 - Extract folder on target machine
 - On Linux, give `LookupTables` file execute permissions, for example
@@ -70,7 +69,7 @@ Lookup Tables are configured in `Laserfiche Cloud -> Process Automation -> Data 
 
    ![Create key in developer console](./assets/images/DevConsoleCreateKey.png){: width="500"}
 
-- Store the 'Service Principal key' and the 'base-64 Access Key' securely. These strings represent the credentials required by the Lookup Tables CLI tool. See [Usage examples](#usage-examples).
+- Store the 'Service Principal key' and the 'base-64 Access Key' securely. These strings represent the credentials required by the Lookup Tables CLI tool. See [Usage examples](#lookup-tables-cli-usage-examples).
 
 ## Passing credentials to CLI tool
 
@@ -86,7 +85,7 @@ Lookup Tables are configured in `Laserfiche Cloud -> Process Automation -> Data 
 {: .note }
 **Note:** The .env file contains secrets. Keep in a secure location.
 
-## Lookup Tables CLI Usage
+## Lookup Tables CLI Usage Examples
 
 ### Show help and usage information
 
