@@ -142,6 +142,7 @@ DEPENDENCIES
   LaserficheDocs!
   bundler (>= 2.3.5)
   html-proofer (~> 5.0)
+  jekyll (~> 4.2)
   jekyll-include-cache
   jekyll-redirect-from
 
