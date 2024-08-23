@@ -38,10 +38,11 @@
 
 .main-content-wrap {
   min-height: calc(100vh - #{$header-height} - #{$min-footer-height});
-  @include container;
 
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
+
+  @include container;
 
   @include mq(md) {
     padding-top: $gutter-spacing;
@@ -126,9 +127,7 @@
   }
 }
 
-.site-title {
-  @include container;
-
+.site-title { 
   flex-grow: 1;
   display: flex;
   height: 100%;
@@ -136,6 +135,7 @@
   padding-top: $sp-4;
   padding-bottom: $sp-3;
   color: $body-heading-color;
+  @include container;
   @include fs-6;
 
   @include mq(md) {
