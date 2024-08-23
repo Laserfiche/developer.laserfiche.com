@@ -16,7 +16,8 @@ The Lookup Table OData API allows users to interact with data stored in lookup t
 
 ## Try it out
 
-Use [swagger](./../playground/) to explore the API's possibilities.
+- Use [swagger](./../playground/) to explore the API's possibilities.
+- Use the [Lookup Tables command line utility](../../guides/guide-lookup-tables-cli/)
 
 In order to authenticate, follow the instructions in [Authenticate to the Swagger playground](./../authentication/guide_authenticating-to-the-swagger-playground/) or [Authenticate to the Laserfiche API](./../authentication/). The table API supports both Bearer access token authentication and Basic username/password authentication for use with applications like Excel and Power BI. Those details can be found in the links above.
 

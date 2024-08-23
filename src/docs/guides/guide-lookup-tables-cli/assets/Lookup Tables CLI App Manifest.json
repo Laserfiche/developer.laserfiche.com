@@ -1,0 +1,11 @@
+{
+	"clientId": "1a2d67ca-18ce-48ae-acc0-f666b979bfaf",
+	"name": "Lookup Tables CLI",
+	"description": "",
+	"type": "Service",
+	"expiresInMinutes": 720,
+	"scopes": [
+		"table.Read",
+		"table.Write"
+	]
+}
