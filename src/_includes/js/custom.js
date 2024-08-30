@@ -7,14 +7,17 @@
     const svg = toggleDarkMode.querySelector('use');
     if (theme === 'dark') {
       svg.setAttribute('href', '#svg-sun');
+      toggleDarkMode.setAttribute('title', 'Light mode');
     } else {
       svg.setAttribute('href', '#svg-moon');
+      toggleDarkMode.setAttribute('title', 'Dark mode');
     }
   }
+
   if (localStorage.getItem('color-scheme') === null) {
     const newColorScheme =
       window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
+        window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light';
 
@@ -50,6 +53,11 @@
       jtd.setTheme(newColorScheme);
       setThemeIcon(newColorScheme);
       localStorage.setItem('color-scheme', newColorScheme);
+    });
+
+    const editButton = document.getElementById('edit-button');
+    jtd.addEvent(editButton, 'click', function () {
+      location.href = 'https://github.com/Laserfiche/laserfiche.github.io';
     });
   });
 })(window.jtd);
