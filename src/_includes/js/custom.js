@@ -55,9 +55,5 @@
       localStorage.setItem('color-scheme', newColorScheme);
     });
 
-    const editButton = document.getElementById('edit-button');
-    jtd.addEvent(editButton, 'click', function () {
-      location.href = 'https://github.com/Laserfiche/laserfiche.github.io';
-    });
   });
 })(window.jtd);
