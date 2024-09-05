@@ -36,6 +36,19 @@
       },
       "problemMatcher": [],
       "command": "bundle"
+    },
+    {
+      "label": "bundle exec rake",
+      "type": "shell",
+      "args": [
+        "exec",
+        "rake"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/src/"
+      },
+      "problemMatcher": [],
+      "command": "bundle"
     }
   ],
   "inputs": [
