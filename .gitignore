@@ -1,5 +1,6 @@
 # Site files
 **_site
+**_build
 
 # Logs
 logs
@@ -15,6 +16,7 @@ lib
 release
 solution
 temp
+.jekyll-metadata
 
 # Coverage directory used by tools like istanbul
 coverage
