@@ -106,3 +106,9 @@ Linux:
 ```bat
 .\LookupTables.exe list-lookup-tables  --project-scope "project/Global"  --service-principal-key "<ENTER Service Principal Key>" --access-key-base64string "<ENTER base-64 Access Key string>"
 ```
+
+### Query a lookup table in the Global context with a filter
+
+```bat
+.\LookupTables.exe query-lookup-table --project-scope="project/Global" --table-name="<YourTableName>" --output-format=JSON --filter="Name in ('John', 'Jane') AND Level eq 'Training'" --service-principal-key "<ENTER Service Principal Key>" --access-key-base64string "<ENTER base-64 Access Key string>"
+```
