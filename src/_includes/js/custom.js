@@ -12,48 +12,39 @@
       svg.setAttribute('href', '#svg-moon');
       toggleDarkMode.setAttribute('title', 'Dark mode');
     }
-  }
+  };
 
-  if (localStorage.getItem('color-scheme') === null) {
-    const newColorScheme =
-      window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light';
+  const setThemeAndIcon = (theme) => {
+    if (theme === null) {
+      theme =
+        window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+    }
+    jtd.setTheme(theme);
+    setThemeIcon(theme);
+    localStorage.setItem('color-scheme', theme);
+  };
 
-    document.hidden;
-    jtd.setTheme(newColorScheme);
-    localStorage.setItem('color-scheme', newColorScheme);
+  jtd.onReady(function (event) {
+    var theme = localStorage.getItem('color-scheme');
+    setThemeAndIcon(theme);
 
-    window.addEventListener('DOMContentLoaded', function () {
-      setThemeIcon(newColorScheme);
+    const toggleDarkMode = document.getElementById('theme-toggle');
+    jtd.addEvent(toggleDarkMode, 'click', function () {
+      const newColorScheme = jtd.getTheme() !== 'dark' ? 'dark' : 'light';
+      setThemeAndIcon(newColorScheme);
     });
-  } else {
-    jtd.setTheme(localStorage.getItem('color-scheme'));
-    window.addEventListener('DOMContentLoaded', function () {
-      setThemeIcon(localStorage.getItem('color-scheme'));
-    });
-  }
+  });
 
   window
     .matchMedia('(prefers-color-scheme: dark)')
     .addEventListener('change', (event) => {
       if (localStorage.getItem('color-scheme') === null) {
         const newColorScheme = event.matches ? 'dark' : 'light';
-        jtd.setTheme(newColorScheme);
-        setThemeIcon(newColorScheme);
-        localStorage.setItem('color-scheme', newColorScheme);
+        setThemeAndIcon(newColorScheme);
       }
     });
 
-  window.addEventListener('DOMContentLoaded', function () {
-    const toggleDarkMode = document.getElementById('theme-toggle');
-    jtd.addEvent(toggleDarkMode, 'click', function () {
-      const newColorScheme = jtd.getTheme() !== 'dark' ? 'dark' : 'light';
-      jtd.setTheme(newColorScheme);
-      setThemeIcon(newColorScheme);
-      localStorage.setItem('color-scheme', newColorScheme);
-    });
-
-  });
 })(window.jtd);
