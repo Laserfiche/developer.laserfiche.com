@@ -18,9 +18,9 @@ Laserfiche provides officially supported libraries for popular programming langu
 
 The JavaScript/TypeScript library can be used for web and Node.js applications.
 
-Client Core API: [Documentation](https://laserfiche.github.io/lf-api-client-core-js/docs/1.x/index.html), [NPM Package](https://www.npmjs.com/package/@laserfiche/lf-api-client-core){:target="_blank"}
+Client Core API: [Documentation](https://developer.laserfiche.com/lf-api-js/modules/_laserfiche_lf_api_client_core.html), [NPM Package](https://www.npmjs.com/package/@laserfiche/lf-api-client-core){:target="_blank"}
 
-Repository API: [Documentation](https://laserfiche.github.io/lf-repository-api-client-js/docs/v2/index.html), [NPM Package](https://www.npmjs.com/package/@laserfiche/lf-repository-api-client-v2){:target="_blank"}
+Repository API Client: [Documentation](https://developer.laserfiche.com/lf-api-js/modules/_laserfiche_lf_repository_api_client_v2.html), [NPM Package](https://www.npmjs.com/package/@laserfiche/lf-repository-api-client-v2){:target="_blank"}
 
 Sample Projects: [Node.js](https://github.com/Laserfiche/lf-sample-repository-api-nodejs){:target="_blank"}
 
